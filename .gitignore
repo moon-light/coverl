@@ -1,10 +1,8 @@
-.eunit
-deps
-*.o
 *.beam
+*.o
 *.plt
+.erlang.mk
+_info/
+deps/
+ebin/
 erl_crash.dump
-ebin/*.beam
-rel/example_project
-.concrete/DEV_MODE
-.rebar
