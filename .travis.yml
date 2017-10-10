@@ -1,0 +1,12 @@
+language: erlang
+otp_release:
+    - 20.0.5
+    - 20.1.1
+
+script:
+    - COVERL=1 make tests
+    - make dialyze
+
+after_success:
+    - make coverl-report
+    - bash <(curl -s https://codecov.io/bash) -X gcov -X coveragepy
