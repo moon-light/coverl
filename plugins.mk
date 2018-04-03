@@ -50,16 +50,9 @@ coverl-report:
 clean:: coverl_report-clean
 
 coverl_report-clean:
-	$(gen_verbose) rm -rf $(COVERL_LINE_REPORT) $(COVERL_CD_REPORT)
+	$(gen_verbose) rm -f $(COVERL_REPORT)
 
 distclean:: coverl_data-distclean
 
 coverl_data-distclean:
-	$(gen_verbose) rm -rf $(COVERL_EUNIT_DATA) $(COVERL_CT_DATA)
-
-ifneq ($(COVERL_DIR),$(CURDIR))
-distclean:: coverl_dir-distclean
-endif
-
-coverl_dir-distclean:
-	$(gen_verbose) rm -rf $(COVERL_DIR)
+	$(gen_verbose) rm -f $(COVERL_EUNIT_DATA) $(COVERL_CT_DATA)
